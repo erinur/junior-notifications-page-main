@@ -13,7 +13,7 @@ const activityContainer = usersActivity
     (elem) =>
       `
       <div id = ${elem.userPosition} class = "notification-box ${elem.interactionType}">
-          <img class = "userAvatar" src = ${elem.userAvatar}>
+          <img class = "userAvatar" src = ${elem.userAvatar} alt="">
           <div class = "notification-text">
             <div class = "notification-text-up">
               <span class = "username">${elem.userName}</span>
@@ -24,7 +24,7 @@ const activityContainer = usersActivity
             <div class = "notification-date">${elem.interactionDate}</div>
             <div class = "notification-msg">${elem.userMsg}</div>
           </div>
-          <img class = "commentedPicture" src = ${elem.commentedPicture}>
+          <img class = "commentedPicture" src = ${elem.commentedPicture} alt="">
       </div>
       `
   )
