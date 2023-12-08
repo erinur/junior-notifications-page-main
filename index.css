@@ -1,0 +1,277 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(1, 90%, 64%)
+- Blue: hsl(219, 85%, 26%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Very light grayish blue: hsl(210, 60%, 98%)
+- Light grayish blue 1: hsl(211, 68%, 94%)
+- Light grayish blue 2: hsl(205, 33%, 90%)
+- Grayish blue: hsl(219, 14%, 63%)
+- Dark grayish blue: hsl(219, 12%, 42%)
+- Very dark blue: hsl(224, 21%, 14%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+- Weights: 500, 800
+*/
+
+:root {
+
+  /*### Primary*/
+  --red: hsl(1, 90%, 64%);
+  --blue:hsl(219,85%,26%);
+
+  /* ### Neutral */
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210,60%,98%);
+  --light-grayish-blue-1: hsl(211,68%,94%);
+  --light-grayish-blue-2: hsl(205,33%,90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+
+@font-face {
+  font-family: "Jakarta";
+  src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Jakarta, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--dark-grayish-blue)
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:1440px;
+  height: 991px;
+  padding: 65px;
+  background-color: var(--very-light-grayish-blue);
+}
+
+#notification-container {
+  width: 730px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items:stretch;
+  justify-content: start;
+  padding: 16px 32px;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+#notification-container-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+#active-status-number {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#active-status-number span {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0px 10px;
+  margin-left: 8px;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+
+#markAll:hover{
+  cursor:pointer;
+}
+
+.notification-box {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.userAvatar {
+  height: 48px;
+  margin-right: 16px;
+}
+
+.notification-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.notification-text-up {
+  display: inline;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.username {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+}
+
+.interaction{
+  font-weight: 500;
+}
+
+.interacted {
+  font-weight: 800;
+}
+
+.interacted:hover{
+  cursor: pointer;
+  color: var(--blue)
+}
+
+.notification-msg:hover{
+  cursor: pointer;
+  background-color: var(--light-grayish-blue-1);
+}
+
+.commentedPicture{
+  height: 48px;
+}
+
+.commentedPicture:hover{
+  cursor: pointer;
+}
+
+.notification-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 2px;
+  background-color: var(--red);
+}
+
+.notification-msg {
+  padding: 18px;
+  border: 1px solid var(--light-grayish-blue-2);
+  border-radius: 4px;
+  margin-top: 12px;
+  line-height: 20px;
+}
+
+.notification-date {
+  color: var(--grayish-blue)
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1080px) {
+
+  body {
+    font-size: 14px;
+    background-color: var(--very-dark-blue);
+  }
+
+  main {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:start;
+    width:375px;
+    height: 901px;
+    background-color: var(--white);
+  }
+
+  #notification-container {
+
+    width:360px;
+    border-radius: 0px;
+    padding: 8px 12px;
+  }
+
+  #notification-container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  #active-status-number {
+    font-size: 20px;
+  }
+
+  #active-status-number span {
+    font-weight: 600;
+    padding: 0px 10px;
+    margin-left: 8px;
+    border-radius: 8px;
+  }
+  
+  .notification-box {
+    padding: 12px;
+  }
+
+  .userAvatar {
+    height: 42px;
+    margin-right: 4px;
+  }
+
+  .notification-msg {
+    margin-top: 12px;
+    line-height:20px;
+  }
+
+}
